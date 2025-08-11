@@ -21,7 +21,7 @@ jobs:
          python-version: ['3.8', '3.9', '3.10']
          platform: [ubuntu-latest]  # TODO add Windows as well
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       - name: Set up Python
         uses: actions/setup-python@v5.6.0
