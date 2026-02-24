@@ -1,0 +1,12 @@
+{
+  "timestamp": "20251210_003508",
+  "start_time": "2025-12-10 00:35:08",
+  "backends": [
+    "python",
+    "cython",
+    "numba"
+  ],
+  "runs_per_backend": 10,
+  "total_runs": 30,
+  "base_output_dir": "C:\\Users\\Jakub Kalinski\\Documents\\GitHub\\IonTracks-Cython\\experimental-data\\2019_DCPT\\benchmark_results"
+}

@@ -1,0 +1,13 @@
+Command: C:\Users\Jakub Kalinski\Documents\GitHub\IonTracks-Cython\venv\Scripts\python.exe -u C:\Users\Jakub Kalinski\Documents\GitHub\IonTracks-Cython\experimental-data\2019_DCPT\test_experimental_data.py --backend python --output-dir C:\Users\Jakub Kalinski\Documents\GitHub\IonTracks-Cython\experimental-data\2019_DCPT\benchmark_results\python\run_002
+Return code: 1
+Elapsed time: 2312.14 seconds
+Timeout limit: 2312.12 seconds
+TIMEOUT: Exceeded efficiency requirement (2x max(cython, numba))
+
+======================================================================
+STDOUT:
+======================================================================
+
+======================================================================
+STDERR:
+======================================================================
