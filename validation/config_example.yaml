@@ -1,0 +1,57 @@
+# Example configuration file for IonTracks experimental data comparison
+# 
+# Usage:
+#   1. Copy this file to your desired location (e.g., validation/config.yaml or experimental-data/2019_DCPT/config.yaml)
+#   2. Edit the paths and parameters as needed
+#   3. Run: python -m validation.run_comparison validation/config.yaml
+#
+# Recommended locations:
+#   - validation/config.yaml - for project-wide configurations
+#   - experimental-data/DATASET_NAME/config.yaml - for experiment-specific configurations
+
+# Path to experimental data CSV file
+# The CSV should contain columns for energy, dose rate, and k_s values
+# See README.md for details on required column names
+experimental_data_path: "experimental-data/2019_DCPT/recombination_200V_data.csv"
+
+# Output directory for results (CSV files and plots)
+output_dir: "results"
+
+# Simulation configuration
+simulation:
+  # Backend selection: cython (fastest), python, numba, cupy, parallel
+  backend: "cython"
+  
+  # Experimental setup parameters
+  voltage_V: 200.0          # Applied voltage in volts
+  electrode_gap_cm: 0.2     # Electrode gap in cm (typically 0.1-0.2 cm)
+  particle: "proton"        # Particle type (proton, carbon, helium, etc.)
+  
+  # Physics model parameters
+  RDD_model: "Gauss"        # Radial dose distribution model: "Gauss" or "Geiss"
+  grid_size_um: 5.0         # Spatial grid resolution in micrometers
+                            # Smaller = more accurate but slower (typical: 3.0-5.0)
+  a0_nm: 8.0                # Track core radius parameter in nanometers
+  use_beta: false           # Scale track core by β = v/c (usually false)
+  
+  # Computational options
+  seed: null                # Random seed for reproducibility (null = random)
+  SHOW_PLOT: false          # Show simulation plots during calculation
+  PRINT_parameters: false   # Print detailed parameters
+  debug: false              # Enable debug mode
+
+# Comparison options
+compare_initial_recombination: true   # Compare initial recombination (fast)
+compare_continuous_beam: true         # Compare general recombination (slow, may take hours)
+
+# Data column names (auto-detected if not specified)
+# Leave as null to auto-detect, or specify exact column names
+dose_rate_column: null      # e.g., "dose_rate_air_Gy_s" or "dose_rate_water_Gy_s"
+energy_column: null         # e.g., "Energy_MeV"
+ks_column: null             # e.g., "k_s"
+
+# Plotting options
+plot_format: "png"          # Output format: "png", "pdf", "svg"
+plot_dpi: 300               # Resolution for raster formats
+plot_style: "whitegrid"     # Matplotlib style
+

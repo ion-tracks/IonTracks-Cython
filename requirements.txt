@@ -6,6 +6,7 @@ mpmath
 pandas
 seaborn
 numba
+pyyaml
 isort
 flake8
 flake8-isort

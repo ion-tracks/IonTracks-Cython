@@ -1,0 +1,23 @@
+experimental_data_path: experimental-data/2019_DCPT/recombination_200V_data.csv
+output_dir: results
+simulation:
+  backend: cython
+  voltage_V: 200.0
+  electrode_gap_cm: 0.2
+  particle: proton
+  RDD_model: Gauss
+  grid_size_um: 5.0
+  a0_nm: 8.0
+  use_beta: false
+  seed: null
+  SHOW_PLOT: false
+  PRINT_parameters: false
+  debug: false
+compare_initial_recombination: true
+compare_continuous_beam: true
+dose_rate_column: null
+energy_column: null
+ks_column: null
+plot_format: png
+plot_dpi: 300
+plot_style: whitegrid
