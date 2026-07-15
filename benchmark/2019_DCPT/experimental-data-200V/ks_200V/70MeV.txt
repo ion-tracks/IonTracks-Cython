@@ -1,0 +1,3 @@
+Energy_MeV,dose_Gy,dose_rate_factor,time_s,dose_rate_water_Gy_s,dose_rate_air_Gy_s,k_s
+70,0.825,1.00,0.022265,0.936,0.823,1.0006
+

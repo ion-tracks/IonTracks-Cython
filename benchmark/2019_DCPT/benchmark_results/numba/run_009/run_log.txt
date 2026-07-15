@@ -1,0 +1,134 @@
+Command: C:\Users\Jakub Kalinski\Documents\GitHub\IonTracks-Cython\venv\Scripts\python.exe -u C:\Users\Jakub Kalinski\Documents\GitHub\IonTracks-Cython\experimental-data\2019_DCPT\test_experimental_data.py --backend numba --output-dir C:\Users\Jakub Kalinski\Documents\GitHub\IonTracks-Cython\experimental-data\2019_DCPT\benchmark_results\numba\run_009
+Return code: 0
+Elapsed time: 402.06 seconds
+
+======================================================================
+STDOUT:
+======================================================================
+======================================================================
+TESTING EXPERIMENTAL DATA DCPT 2019
+======================================================================
+
+Loaded 10 experimental measurements
+Energies: [np.int64(70), np.int64(150), np.int64(226), np.int64(244)] MeV
+Voltage: 200 V
+Electrode gap: 0.2 cm
+
+======================================================================
+METHOD 1: INITIAL RECOMBINATION
+======================================================================
+Calculating for 70 MeV...
+Calculating for 150 MeV...
+Calculating for 226 MeV...
+Calculating for 244 MeV...
+
+Initial Recombination Comparison:
+ Energy_MeV  k_s_experimental  k_s_IonTracks  difference  relative_error_%
+         70            1.0006       1.000362   -0.000238         -0.023794
+        150            1.0005       1.000207   -0.000293         -0.029326
+        226            1.0008       1.000158   -0.000642         -0.064149
+        244            1.0008       1.000151   -0.000649         -0.064869
+
+======================================================================
+METHOD 2: CONTINUOUS BEAM (General Recombination)
+======================================================================
+WARNING: This may take several minutes...
+Progress: 1/10 (10.0%)
+Execution for Von Neuman expression: 0.0008671283721923828s
+Number of steps: 912
+Avg time for inserting track step: 0.028483231339538305s
+Avg time for calculating new densities 0.017101845720358062s
+Time of simulation: 41.8624210357666s
+Execution for Von Neuman expression: 0.0021300315856933594s
+Number of steps: 912
+Avg time for inserting track step: 0.013791451590103015s
+Avg time for calculating new densities 0.01653653513966945s
+Time of simulation: 28.070038557052612s
+Execution for Von Neuman expression: 0.0008993148803710938s
+Number of steps: 912
+Avg time for inserting track step: 0.005748252596771508s
+Avg time for calculating new densities 0.015243344662482278s
+Time of simulation: 19.437278985977173s
+Execution for Von Neuman expression: 0.0012443065643310547s
+Number of steps: 912
+Avg time for inserting track step: 0.054822088333598355s
+Avg time for calculating new densities 0.01510338354528996s
+Time of simulation: 64.05797863006592s
+Execution for Von Neuman expression: 0.0012755393981933594s
+Number of steps: 912
+Avg time for inserting track step: 0.02792082857667354s
+Avg time for calculating new densities 0.015428269902865091s
+Time of simulation: 39.826194524765015s
+Progress: 6/10 (60.0%)
+Execution for Von Neuman expression: 0.0013337135314941406s
+Number of steps: 912
+Avg time for inserting track step: 0.0110356352831188s
+Avg time for calculating new densities 0.01505976026518303s
+Time of simulation: 24.081625938415527s
+Execution for Von Neuman expression: 0.0016481876373291016s
+Number of steps: 912
+Avg time for inserting track step: 0.06198434087268093s
+Avg time for calculating new densities 0.015134841987961218s
+Time of simulation: 70.62524366378784s
+Execution for Von Neuman expression: 0.0013277530670166016s
+Number of steps: 912
+Avg time for inserting track step: 0.030678739673212954s
+Avg time for calculating new densities 0.016630368013130992s
+Time of simulation: 43.43561410903931s
+Execution for Von Neuman expression: 0.001354217529296875s
+Number of steps: 912
+Avg time for inserting track step: 0.01240694104579457s
+Avg time for calculating new densities 0.015657957708626463s
+Time of simulation: 25.893929481506348s
+Execution for Von Neuman expression: 0.0013649463653564453s
+Number of steps: 912
+Avg time for inserting track step: 0.003574079327416002s
+Avg time for calculating new densities 0.018710542666284663s
+Time of simulation: 20.63742709159851s
+
+Continuous Beam Comparison:
+ Energy_MeV  dose_rate_air_Gy_s    k_s  k_s_IonTracks  difference  relative_error_%
+         70               0.823 1.0006       1.001223    0.000623             0.062
+        150               0.762 1.0005       1.000977    0.000477             0.048
+        150               1.866 1.0013       1.002051    0.000751             0.075
+        150               3.665 1.0025       1.003694    0.001194             0.119
+        226               1.122 1.0008       1.001266    0.000466             0.047
+        226               2.877 1.0019       1.002907    0.001007             0.101
+        226               5.610 1.0038       1.005527    0.001727             0.172
+        244               1.207 1.0008       1.001321    0.000521             0.052
+        244               2.978 1.0020       1.002969    0.000969             0.097
+        244               6.103 1.0041       1.006001    0.001901             0.189
+
+=== Error Statistics ===
+Number of successful calculations: 10/10
+Mean absolute error: 0.000964
+Mean relative error: 0.096%
+Median relative error: 0.086%
+Max relative error: 0.189%
+Min relative error: 0.047%
+Standard deviation: 0.051%
+
+======================================================================
+GENERATING PLOTS
+======================================================================
+[OK] Saved: initial_recombination_comparison.png
+[OK] Saved: continuous_beam_comparison.png
+[OK] Saved: relative_error.png
+
+======================================================================
+SAVING RESULTS
+======================================================================
+[OK] Saved: comparison_initial.csv
+[OK] Saved: comparison_continuous.csv
+  NOTE: Calculations used dose_rate_air_Gy_s (not dose_rate_water_Gy_s)
+[OK] Saved: comparison_continuous_clean.csv (essential columns only)
+
+All results saved in: C:\Users\Jakub Kalinski\Documents\GitHub\IonTracks-Cython\experimental-data\2019_DCPT\benchmark_results\numba\run_009
+
+======================================================================
+TESTING COMPLETED
+======================================================================
+
+======================================================================
+STDERR:
+======================================================================
