@@ -1,4 +1,4 @@
-﻿# 2019_DCPT Backend Engines (BE) Benchmark
+﻿# Benchmark of Backend Engines (BE) on 2019_DCPT experimental data
 
 ## Objective
 This README documents **backend engine (BE) comparison** for `IonTracks-Cython` on the `2019_DCPT` case.
@@ -11,7 +11,7 @@ The comparison focuses on:
 - practical backend selection trade-offs.
 
 ## Scope and benchmark setup
-Benchmark target: `benchmark/2019_DCPT/`
+Benchmark target: `backend-performance-benchmark/2019_DCPT/`
 
 Compared backends:
 
@@ -19,7 +19,7 @@ Compared backends:
 - `cython`
 - `numba`
 
-Benchmark metadata (`benchmark/2019_DCPT/benchmark_results/metadata_20251210_003508.json`):
+Benchmark metadata (`backend-performance-benchmark/2019_DCPT/benchmark_results/metadata_20251210_003508.json`):
 
 - runs per backend: 10
 - total runs: 30
@@ -28,7 +28,7 @@ Benchmark metadata (`benchmark/2019_DCPT/benchmark_results/metadata_20251210_003
 ## Experimental reference data (used for BE comparison)
 The benchmark is evaluated against the experimental dataset now available under:
 
-- `benchmark/2019_DCPT/experimental-data-200V/recombination_200V_data.csv`
+- `backend-performance-benchmark/2019_DCPT/experimental-data-200V/recombination_200V_data.csv`
 
 Dataset summary:
 
@@ -40,17 +40,17 @@ Dataset summary:
 
 Supporting context is included in:
 
-- `benchmark/2019_DCPT/experimental-data-200V/README.md`
+- `backend-performance-benchmark/2019_DCPT/experimental-data-200V/README.md`
 
 ## Where benchmark outputs are stored
 Main benchmark outputs are in:
 
-- `benchmark/2019_DCPT/benchmark_results/summary_all_runs_20251210_003508.csv`
-- `benchmark/2019_DCPT/benchmark_results/statistics_summary_20251210_003508.csv`
-- `benchmark/2019_DCPT/benchmark_results/plots/`
-- `benchmark/2019_DCPT/benchmark_results/cython/run_001 ... run_010/`
-- `benchmark/2019_DCPT/benchmark_results/numba/run_001 ... run_010/`
-- `benchmark/2019_DCPT/benchmark_results/python/run_001 ... run_010/`
+- `backend-performance-benchmark/2019_DCPT/benchmark_results/summary_all_runs_20251210_003508.csv`
+- `backend-performance-benchmark/2019_DCPT/benchmark_results/statistics_summary_20251210_003508.csv`
+- `backend-performance-benchmark/2019_DCPT/benchmark_results/plots/`
+- `backend-performance-benchmark/2019_DCPT/benchmark_results/cython/run_001 ... run_010/`
+- `backend-performance-benchmark/2019_DCPT/benchmark_results/numba/run_001 ... run_010/`
+- `backend-performance-benchmark/2019_DCPT/benchmark_results/python/run_001 ... run_010/`
 
 Each successful `cython`/`numba` run contains:
 
@@ -141,20 +141,20 @@ In short, this benchmark shows a clear BE trade-off:
 ## How to reproduce the benchmark inputs/results
 A short reproduction note is included here:
 
-- `benchmark/2019_DCPT/experimental-data-200V/how_to_reproduce_results.md`
+- `backend-performance-benchmark/2019_DCPT/experimental-data-200V/how_to_reproduce_results.md`
 
 Use that guide to regenerate the comparison artifacts (`comparison_*.csv`, plots, relative error chart) from the experimental data configuration.
 
 Primary scripts for rerunning BE benchmark/plots:
 
-- `benchmark/2019_DCPT/run_benchmark.py`
-- `benchmark/2019_DCPT/plot_benchmark_results.py`
+- `backend-performance-benchmark/2019_DCPT/run_benchmark.py`
+- `backend-performance-benchmark/2019_DCPT/plot_benchmark_results.py`
 
 PowerShell example:
 
 ```powershell
-python .\benchmark\2019_DCPT\run_benchmark.py
-python .\benchmark\2019_DCPT\plot_benchmark_results.py
+python .\backend-performance-benchmark\2019_DCPT\run_benchmark.py
+python .\backend-performance-benchmark\2019_DCPT\plot_benchmark_results.py
 ```
 
-Note: if you reproduce from custom config files, make sure the experimental data path points to the current benchmark-local dataset (`benchmark/2019_DCPT/experimental-data-200V/...`).
+Note: if you reproduce from custom config files, make sure the experimental data path points to the current benchmark-local dataset (`backend-performance-benchmark/2019_DCPT/experimental-data-200V/...`).
